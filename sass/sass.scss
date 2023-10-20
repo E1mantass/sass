@@ -1,0 +1,22 @@
+@import "var";
+@import "button";
+@import "mixins/card";
+nav{
+    ul{
+        @include card(300px, 20px, 10px, 100px);
+        display: $disFlex;
+        justify-content: space-between;
+        li{
+            display: flex;
+            a{
+                color: white;
+                text-decoration: $textDeco;
+                padding: 20px;
+                @extend .button;
+                &:hover{
+                    color: yellow;
+                }
+            }
+        }
+    }
+}
